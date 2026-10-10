@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aya Hassan | Architect &amp; BIM Specialist</title>
+  
+  <!-- SEO & Social Sharing Metadata -->
+  <meta name="description" content="Portfolio of Aya Hassan — Final-year architecture student at Al-Azhar University (July 2025). Specializing in architectural design, Revit BIM, quantity surveying, and site finishing supervision." />
+  <meta name="keywords" content="Aya Hassan, Architect, Al-Azhar University, Architecture Portfolio, BIM, Revit, AutoCAD, Lumion, Quantity Surveying, Finishing Works, Cairo Egypt" />
+  <meta name="author" content="Aya Hassan" />
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aya Hassan | Architect &amp; BIM Specialist" />
+  <meta property="og:description" content="Synthesizing creative architectural design with hands-on site execution, quantity surveying, and Revit BIM workflows." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Google Fonts: Space Grotesk (Headings) + Plus Jakarta Sans (Body) + JetBrains Mono (Tech Specs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            blueprint: {
+              50: '#f0f9ff',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              900: '#0c4a6e',
+            },
+            archslate: {
+              800: '#161a22',
+              900: '#0b0d10',
+              950: '#07090c',
+            }
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Bespoke Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0d10'/%3E%3Crect x='15' y='15' width='70' height='70' fill='none' stroke='%2338bdf8' stroke-width='4' stroke-dasharray='10,5'/%3E%3Ctext x='50' y='62' font-family='sans-serif' font-size='38' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3EAH%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body class="selection:bg-sky-500 selection:text-white min-h-screen flex flex-col transition-colors duration-300">
+
+  <!-- ========================================================================= -->
+  <!-- NAVIGATION BAR                                                            -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 w-full nav-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Monogram & Architect Title -->
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 border border-sky-400/40 rounded flex items-center justify-center font-mono font-bold text-sky-400 bg-sky-500/10 group-hover:border-sky-400 group-hover:scale-105 transition-all">
+          AH
+        </div>
+        <div>
+          <span class="font-heading font-bold tracking-tight text-lg block leading-none text-neutral-100 group-hover:text-sky-400 transition-colors">
+            AYA HASSAN
+          </span>
+          <span class="text-[10px] tracking-widest uppercase font-mono text-neutral-400 block mt-1">
+            Architect &bull; BIM Specialist
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-300">
+        <a href="#projects" class="nav-link hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#site-experience" class="nav-link hover:text-sky-400 transition-colors">Site &amp; QS</a>
+        <a href="#skills" class="nav-link hover:text-sky-400 transition-colors">Toolkit</a>
+        <a href="#about" class="nav-link hover:text-sky-400 transition-colors">Philosophy</a>
+        <a href="#education" class="nav-link hover:text-sky-400 transition-colors">Journey</a>
+        <a href="#contact" class="nav-link hover:text-sky-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header CTAs & Theme Toggle -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Theme" class="w-10 h-10 rounded border border-neutral-700/60 bg-neutral-800/40 hover:bg-neutral-800 flex items-center justify-center text-neutral-300 hover:text-sky-400 transition-colors focus:outline-none">
+          <!-- Sun Icon (Shown in light mode) -->
+          <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <!-- Moon Icon (Shown in dark mode) -->
+          <svg id="theme-icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+
+        <!-- CV Modal Trigger -->
+        <button class="open-cv-btn hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800/50 hover:bg-neutral-800 text-neutral-200 transition-all">
+          <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          CV Document
+        </button>
+
+        <!-- LinkedIn Direct CTA -->
+        <a href="https://www.linkedin.com/in/aya-hassan-405877280/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-semibold uppercase tracking-wider rounded bg-sky-500 hover:bg-sky-400 text-slate-950 transition-all shadow-sm shadow-sky-500/20">
+          LinkedIn
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="md:hidden w-10 h-10 rounded border border-neutral-700 flex items-center justify-center text-neutral-300">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden border-t border-neutral-800 bg-neutral-900/95 px-6 py-6 space-y-4">
+      <a href="#projects" class="mobile-nav-link block text-base font-medium text-neutral-200 hover:text-sky-400">Selected Projects</a>
+      <a href="#site-experience" class="mobile-nav-link block text-base font-medium text-neutral-200 hover:text-sky-400">Site &amp; Quantity Surveying</a>
+      <a href="#skills" class="mobile-nav-link block text-base font-medium text-neutral-200 hover:text-sky-400">Software &amp; Toolkit</a>
+      <a href="#about" class="mobile-nav-link block text-base font-medium text-neutral-200 hover:text-sky-400">Philosophy</a>
+      <a href="#education" class="mobile-nav-link block text-base font-medium text-neutral-200 hover:text-sky-400">Academic Journey</a>
+      <a href="#contact" class="mobile-nav-link block text-base font-medium text-neutral-200 hover:text-sky-400">Contact &amp; Inquiries</a>
+      <div class="pt-4 border-t border-neutral-800 flex flex-col gap-2">
+        <button class="open-cv-btn w-full py-2.5 text-center text-xs font-mono font-semibold uppercase tracking-wider rounded border border-neutral-700 bg-neutral-800 text-neutral-200">
+          View Full Curriculum Vitae
+        </button>
+        <a href="https://www.linkedin.com/in/aya-hassan-405877280/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 text-center text-xs font-mono font-semibold uppercase tracking-wider rounded bg-sky-500 text-slate-950">
+          Connect on LinkedIn ↗
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION                                                              -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-neutral-800/80">
+      
+      <!-- Architectural Blueprint Watermark Lines -->
+      <div class="absolute inset-0 pointer-events-none opacity-20">
+        <div class="absolute top-1/4 left-10 w-96 h-96 border border-sky-400/30 rounded-full"></div>
+        <div class="absolute top-1/3 left-1/3 w-[500px] h-[500px] border border-neutral-600/30"></div>
+        <div class="absolute bottom-10 right-20 text-[100px] font-mono font-bold text-neutral-800/30 select-none">
+          SEC.01
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-mono font-medium mb-6 animate-pulse">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
+          Al-Azhar University &bull; Graduating July 2025 &bull; Open for Opportunities
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text -->
+          <div class="lg:col-span-8 space-y-6">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-100 leading-[1.08]">
+              BRIDGING <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-200 to-amber-200">CREATIVE VISION</span> WITH PRACTICAL SITE REALITY.
+            </h1>
+
+            <p class="text-lg sm:text-xl text-neutral-400 max-w-2xl font-light leading-relaxed">
+              I am <strong class="font-medium text-neutral-200">Aya Hassan</strong>, a final-year architecture student at Al-Azhar University. Passionate about synthesizing concept-driven design with on-site construction realism, specialized in <span class="text-sky-400 font-mono text-base font-normal">Revit BIM workflows</span>, <span class="text-sky-400 font-mono text-base font-normal">Quantity Surveying</span>, and <span class="text-sky-400 font-mono text-base font-normal">Finishing Works</span>.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a href="#projects" class="px-6 py-3.5 rounded text-sm font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 flex items-center gap-2 transition-all shadow-lg shadow-sky-500/20 group">
+                Explore Selected Projects
+                <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </a>
+
+              <a href="#site-experience" class="px-6 py-3.5 rounded text-sm font-semibold border border-neutral-700 hover:border-sky-400 bg-neutral-900/60 hover:bg-neutral-800 text-neutral-200 flex items-center gap-2 transition-all">
+                Site &amp; QS Training
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+
+              <button class="open-cv-btn px-5 py-3.5 rounded text-sm font-mono border border-neutral-800 hover:border-neutral-600 bg-transparent text-neutral-400 hover:text-neutral-200 transition-colors">
+                [View CV]
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Architectural Metric Card -->
+          <div class="lg:col-span-4">
+            <div class="arch-card arch-corners rounded-lg p-6 sm:p-8 space-y-6">
+              
+              <div class="flex items-center justify-between border-b border-neutral-800 pb-4">
+                <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Architect Profile Spec</span>
+                <span class="text-xs font-mono text-neutral-500">REV. 2025</span>
+              </div>
+
+              <!-- Metric Row 1 -->
+              <div class="space-y-1">
+                <div class="text-xs font-mono text-neutral-400 uppercase">Academic Status</div>
+                <div class="text-lg font-heading font-semibold text-neutral-100">B.Sc. Architecture (July 2025)</div>
+                <div class="text-xs text-neutral-500">Faculty of Engineering, Al-Azhar University</div>
+              </div>
+
+              <!-- Metric Row 2 -->
+              <div class="space-y-1">
+                <div class="text-xs font-mono text-neutral-400 uppercase">Core Design Tools</div>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/30">Revit</span>
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300 border border-neutral-700">AutoCAD</span>
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300 border border-neutral-700">SketchUp</span>
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300 border border-neutral-700">Lumion</span>
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300 border border-neutral-700">Photoshop</span>
+                </div>
+              </div>
+
+              <!-- Metric Row 3 -->
+              <div class="space-y-1">
+                <div class="text-xs font-mono text-neutral-400 uppercase">Practical Site Edge</div>
+                <div class="text-sm text-neutral-300 font-medium">
+                  Hands-on field training in <span class="text-amber-300">Finishing Works</span> &amp; <span class="text-amber-300">Quantity Surveying (BOQ)</span>.
+                </div>
+              </div>
+
+              <!-- Metric Row 4 -->
+              <div class="pt-2 border-t border-neutral-800 flex items-center justify-between text-xs font-mono text-neutral-400">
+                <span>Location: Cairo, Egypt</span>
+                <span class="text-emerald-400 font-medium">&bull; Active</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SITE TRAINING & PRACTICAL EXPERIENCE (The Key Differentiator)            -->
+    <!-- ========================================================================= -->
+    <section id="site-experience" class="py-20 md:py-28 border-b border-neutral-800/80 bg-neutral-900/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Title -->
+        <div class="max-w-3xl mb-16">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+            <span class="w-8 h-px bg-sky-400"></span>
+            01 / FIELD &amp; TECHNICAL EXPERIENCE
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-100">
+            PRACTICAL SITE KNOWLEDGE &amp; QUANTITY SURVEYING
+          </h2>
+          <p class="mt-4 text-neutral-400 text-base sm:text-lg">
+            Unlike purely theoretical design portfolios, my architectural methodology is reinforced by direct, hands-on training on active building sites and technical offices.
+          </p>
+        </div>
+
+        <!-- 3 Feature Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1: Finishing Works -->
+          <div class="arch-card arch-corners rounded-lg p-8 relative group">
+            <div class="w-12 h-12 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <!-- Trowel / Construction Icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <div class="text-xs font-mono text-amber-400 uppercase tracking-wider mb-1">Field Training</div>
+            <h3 class="text-xl font-heading font-bold text-neutral-100 mb-3">Finishing Works (تشطيبات موقع)</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+              Direct supervision and inspection across key architectural finishing stages: masonry alignment, plastering tolerances, ceramic and marble tile layout, false gypsum ceilings, paint finishes, and MEP rough-in coordination.
+            </p>
+            <ul class="text-xs font-mono text-neutral-400 space-y-1.5 border-t border-neutral-800 pt-4">
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Snag lists &amp; quality compliance</li>
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Architectural detail execution on site</li>
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Resolving contractor site discrepancies</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: Quantity Surveying -->
+          <div class="arch-card arch-corners rounded-lg p-8 relative group">
+            <div class="w-12 h-12 rounded bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <!-- Calculator / Ruler Icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div class="text-xs font-mono text-sky-400 uppercase tracking-wider mb-1">Technical Office</div>
+            <h3 class="text-xl font-heading font-bold text-neutral-100 mb-3">Quantity Surveying (حصر كميات)</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+              Trained in meticulous material takeoffs and preparing comprehensive Bill of Quantities (BOQ). Calculating exact surface areas, volumes of concrete, masonry quantities, flooring packages, and painting areas.
+            </p>
+            <ul class="text-xs font-mono text-neutral-400 space-y-1.5 border-t border-neutral-800 pt-4">
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Bill of Quantities (BOQ) preparation</li>
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Material wastage calculations</li>
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Cost awareness &amp; budget estimation</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3: Technical & BIM Coordination -->
+          <div class="arch-card arch-corners rounded-lg p-8 relative group">
+            <div class="w-12 h-12 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <!-- BIM / Layer Icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-1">Digital Execution</div>
+            <h3 class="text-xl font-heading font-bold text-neutral-100 mb-3">BIM &amp; Working Drawings (رسومات تنفيذية)</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+              Proficient in transforming conceptual sketches into coordinated construction documentation using Revit and AutoCAD. Developing accurate wall assemblies, door/window schedules, and detailing.
+            </p>
+            <ul class="text-xs font-mono text-neutral-400 space-y-1.5 border-t border-neutral-800 pt-4">
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Revit automated schedule generation</li>
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> 1:20 &amp; 1:10 architectural details</li>
+              <li class="flex items-center gap-2"><span class="text-sky-400">&bull;</span> Structural &amp; architectural clash avoidance</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Site Quote Banner -->
+        <div class="mt-12 p-6 rounded-lg border border-neutral-800 bg-neutral-900/60 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <span class="text-3xl text-sky-400 font-serif">“</span>
+            <p class="text-sm text-neutral-300 italic">
+              A line drawn on Revit is only as good as its capability to be executed accurately by craftsmen on site within budget and time.
+            </p>
+          </div>
+          <a href="#contact" class="whitespace-nowrap px-4 py-2 text-xs font-mono uppercase tracking-wider rounded border border-sky-500/40 text-sky-400 hover:bg-sky-500/10 transition-colors">
+            Inquire About Collaboration →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- SELECTED ARCHITECTURAL PROJECTS                                           -->
+    <!-- ========================================================================= -->
+    <section id="projects" class="py-20 md:py-32 border-b border-neutral-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header & Category Filter -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+              <span class="w-8 h-px bg-sky-400"></span>
+              02 / SELECTED WORKS
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-100">
+              FEATURED ARCHITECTURAL PORTFOLIO
+            </h2>
+          </div>
+
+          <!-- Category Buttons -->
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <button class="filter-btn px-3.5 py-1.5 rounded-full border border-sky-500 bg-sky-500 text-white transition-all" data-filter="all">
+              All Works (06)
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-full border border-neutral-700 text-neutral-400 hover:border-neutral-500 transition-all" data-filter="architecture">
+              Architecture
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-full border border-neutral-700 text-neutral-400 hover:border-neutral-500 transition-all" data-filter="bim">
+              BIM &amp; Working
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-full border border-neutral-700 text-neutral-400 hover:border-neutral-500 transition-all" data-filter="interior">
+              Interior &amp; Finishing
+            </button>
+            <button class="filter-btn px-3.5 py-1.5 rounded-full border border-neutral-700 text-neutral-400 hover:border-neutral-500 transition-all" data-filter="academic">
+              Academic
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1: Cultural Pavilion -->
+          <article class="project-card arch-card arch-corners rounded-lg overflow-hidden flex flex-col group transition-all duration-300" data-category="architecture">
+            <div class="img-zoom-container relative aspect-[16/10] bg-neutral-900 border-b border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="The Monolith Cultural Pavilion" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="tag-badge bg-black/60 backdrop-blur text-sky-400">Graduation Studio</span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-black/70 backdrop-blur text-neutral-300">2024 - 2025</span>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-neutral-400 mb-1">New Cairo &bull; Cultural Hub</div>
+                <h3 class="text-xl font-heading font-bold text-neutral-100 group-hover:text-sky-400 transition-colors mb-2">
+                  The Monolith: Cultural &amp; Exhibition Pavilion
+                </h3>
+                <p class="text-sm text-neutral-400 line-clamp-3 mb-4">
+                  Sculpted monolithic cultural complex synthesizing heavy masonry aesthetics with daylight atriums. Developed in Revit with environmental orientation and Lumion visualizations.
+                </p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Revit</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Lumion</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Photoshop</span>
+                </div>
+
+                <button class="open-project-modal w-full py-2.5 px-4 rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800/60 hover:bg-neutral-800 text-xs font-mono font-medium text-neutral-200 flex items-center justify-center gap-2 transition-colors" data-project-id="cultural-hub">
+                  <span>View Case Study</span>
+                  <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Bayt Al-Noor Courtyard Villa -->
+          <article class="project-card arch-card arch-corners rounded-lg overflow-hidden flex flex-col group transition-all duration-300" data-category="architecture">
+            <div class="img-zoom-container relative aspect-[16/10] bg-neutral-900 border-b border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Bayt Al-Noor Courtyard Villa" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="tag-badge bg-black/60 backdrop-blur text-sky-400">Residential</span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-black/70 backdrop-blur text-neutral-300">2024</span>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-neutral-400 mb-1">Sheikh Zayed &bull; Private Residence</div>
+                <h3 class="text-xl font-heading font-bold text-neutral-100 group-hover:text-sky-400 transition-colors mb-2">
+                  Bayt Al-Noor: Contemporary Courtyard Villa
+                </h3>
+                <p class="text-sm text-neutral-400 line-clamp-3 mb-4">
+                  Reinterpretation of the Islamic inner courtyard within a modern minimalist cubic form, featuring microclimate passive cooling, travertine facades, and teak screens.
+                </p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">SketchUp</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Revit</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Lumion</span>
+                </div>
+
+                <button class="open-project-modal w-full py-2.5 px-4 rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800/60 hover:bg-neutral-800 text-xs font-mono font-medium text-neutral-200 flex items-center justify-center gap-2 transition-colors" data-project-id="courtyard-villa">
+                  <span>View Case Study</span>
+                  <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: BIM Mixed-Use Residential Complex -->
+          <article class="project-card arch-card arch-corners rounded-lg overflow-hidden flex flex-col group transition-all duration-300" data-category="bim">
+            <div class="img-zoom-container relative aspect-[16/10] bg-neutral-900 border-b border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="BIM Working Drawings Package" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="tag-badge bg-black/60 backdrop-blur text-emerald-400">BIM &amp; BOQ</span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-black/70 backdrop-blur text-neutral-300">2024</span>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-neutral-400 mb-1">Nasr City &bull; Working Documentation</div>
+                <h3 class="text-xl font-heading font-bold text-neutral-100 group-hover:text-sky-400 transition-colors mb-2">
+                  Al-Andalus Mixed-Use: BIM Working Package
+                </h3>
+                <p class="text-sm text-neutral-400 line-clamp-3 mb-4">
+                  Full construction documentation package in Revit: wall sections (1:20), door &amp; window schedules, expansion joint details, and precise material takeoffs (BOQ).
+                </p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Revit LOD 300</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">AutoCAD</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">BOQ Extraction</span>
+                </div>
+
+                <button class="open-project-modal w-full py-2.5 px-4 rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800/60 hover:bg-neutral-800 text-xs font-mono font-medium text-neutral-200 flex items-center justify-center gap-2 transition-colors" data-project-id="bim-residential-complex">
+                  <span>View Case Study</span>
+                  <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Corporate Interior -->
+          <article class="project-card arch-card arch-corners rounded-lg overflow-hidden flex flex-col group transition-all duration-300" data-category="interior">
+            <div class="img-zoom-container relative aspect-[16/10] bg-neutral-900 border-b border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Zenith Tech Headquarters" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="tag-badge bg-black/60 backdrop-blur text-amber-400">Interior Fit-out</span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-black/70 backdrop-blur text-neutral-300">2023 - 2024</span>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-neutral-400 mb-1">Smart Village &bull; Corporate Architecture</div>
+                <h3 class="text-xl font-heading font-bold text-neutral-100 group-hover:text-sky-400 transition-colors mb-2">
+                  Zenith Tech Executive Headquarters
+                </h3>
+                <p class="text-sm text-neutral-400 line-clamp-3 mb-4">
+                  Reflected ceiling plans (RCP), acoustic wall panel details, bespoke millwork joinery drawings, and site finishing supervision for executive boardrooms and open workspaces.
+                </p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Revit</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">AutoCAD</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Finishing Snagging</span>
+                </div>
+
+                <button class="open-project-modal w-full py-2.5 px-4 rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800/60 hover:bg-neutral-800 text-xs font-mono font-medium text-neutral-200 flex items-center justify-center gap-2 transition-colors" data-project-id="corporate-interior">
+                  <span>View Case Study</span>
+                  <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Campus Innovation Pavilion -->
+          <article class="project-card arch-card arch-corners rounded-lg overflow-hidden flex flex-col group transition-all duration-300" data-category="academic">
+            <div class="img-zoom-container relative aspect-[16/10] bg-neutral-900 border-b border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=800&q=80" alt="Al-Azhar Innovation Pavilion" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="tag-badge bg-black/60 backdrop-blur text-sky-400">Academic Studio</span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-black/70 backdrop-blur text-neutral-300">2023</span>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-neutral-400 mb-1">Al-Azhar University &bull; Academic</div>
+                <h3 class="text-xl font-heading font-bold text-neutral-100 group-hover:text-sky-400 transition-colors mb-2">
+                  Al-Azhar Campus Innovation Pavilion
+                </h3>
+                <p class="text-sm text-neutral-400 line-clamp-3 mb-4">
+                  Modular student incubator featuring a dynamic parametric mashrabiya skin engineered to filter Cairo's harsh solar rays while encouraging open collaborative peer work.
+                </p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">SketchUp</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Photoshop</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Physical Model</span>
+                </div>
+
+                <button class="open-project-modal w-full py-2.5 px-4 rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800/60 hover:bg-neutral-800 text-xs font-mono font-medium text-neutral-200 flex items-center justify-center gap-2 transition-colors" data-project-id="azhar-innovation-pavilion">
+                  <span>View Case Study</span>
+                  <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Luxury Penthouse Fit-out -->
+          <article class="project-card arch-card arch-corners rounded-lg overflow-hidden flex flex-col group transition-all duration-300" data-category="interior">
+            <div class="img-zoom-container relative aspect-[16/10] bg-neutral-900 border-b border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Penthouse Finishing & Fit-out" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="tag-badge bg-black/60 backdrop-blur text-amber-400">Site Execution</span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-black/70 backdrop-blur text-neutral-300">2024</span>
+              </div>
+            </div>
+            
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-neutral-400 mb-1">New Cairo &bull; Residential Fit-out</div>
+                <h3 class="text-xl font-heading font-bold text-neutral-100 group-hover:text-sky-400 transition-colors mb-2">
+                  The Sky Residence: Finishing Execution
+                </h3>
+                <p class="text-sm text-neutral-400 line-clamp-3 mb-4">
+                  Turnkey interior finishing package for a 350 m² luxury penthouse. Shadow gaps, frameless pivot doors, marble layout inspection, and comprehensive site snagging lists.
+                </p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">AutoCAD</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">Site Snagging</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">BOQ Details</span>
+                </div>
+
+                <button class="open-project-modal w-full py-2.5 px-4 rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800/60 hover:bg-neutral-800 text-xs font-mono font-medium text-neutral-200 flex items-center justify-center gap-2 transition-colors" data-project-id="luxury-penthouse-fitout">
+                  <span>View Case Study</span>
+                  <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- TECHNICAL TOOLKIT & ARCHITECTURAL SOFTWARE MATRIX                         -->
+    <!-- ========================================================================= -->
+    <section id="skills" class="py-20 md:py-32 border-b border-neutral-800/80 bg-neutral-900/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+            <span class="w-8 h-px bg-sky-400"></span>
+            03 / TECHNICAL RIGOR
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-100">
+            SOFTWARE PROFICIENCY &amp; WORKFLOW
+          </h2>
+          <p class="mt-4 text-neutral-400 text-base sm:text-lg">
+            High proficiency in industry-standard architectural software, uniting parametric BIM intelligence with high-fidelity visualization and site quantification.
+          </p>
+        </div>
+
+        <!-- Software Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Tool 1: Revit -->
+          <div class="arch-card arch-corners rounded-lg p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-sky-500/10 border border-sky-500/40 flex items-center justify-center font-bold text-sky-400 font-heading">
+                  R
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-neutral-100 text-lg">Autodesk Revit</h3>
+                  <span class="text-xs font-mono text-sky-400">BIM Modeling &bull; LOD 300</span>
+                </div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">Advanced</span>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+              Parametric architectural modeling, family creation, automated schedules, sheet layout production, and coordinating architectural grids with structural frames.
+            </p>
+          </div>
+
+          <!-- Tool 2: AutoCAD -->
+          <div class="arch-card arch-corners rounded-lg p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-red-500/10 border border-red-500/40 flex items-center justify-center font-bold text-red-400 font-heading">
+                  A
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-neutral-100 text-lg">AutoCAD</h3>
+                  <span class="text-xs font-mono text-red-400">2D Drafting &bull; Working Details</span>
+                </div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">Advanced</span>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+              Fast, high-precision 2D drafting, site layouts, architectural working sections (1:20), joinery shop drawings, and layer-standardized drafting.
+            </p>
+          </div>
+
+          <!-- Tool 3: SketchUp -->
+          <div class="arch-card arch-corners rounded-lg p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-amber-500/10 border border-amber-500/40 flex items-center justify-center font-bold text-amber-400 font-heading">
+                  S
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-neutral-100 text-lg">SketchUp Pro</h3>
+                  <span class="text-xs font-mono text-amber-400">3D Massing &bull; Spatial Study</span>
+                </div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">Proficient</span>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+              Rapid conceptual iterations, volumetric massing studies, sun orientation tests, and seamless geometry export into Lumion for real-time visualization.
+            </p>
+          </div>
+
+          <!-- Tool 4: Lumion -->
+          <div class="arch-card arch-corners rounded-lg p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-emerald-500/10 border border-emerald-500/40 flex items-center justify-center font-bold text-emerald-400 font-heading">
+                  L
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-neutral-100 text-lg">Lumion</h3>
+                  <span class="text-xs font-mono text-emerald-400">3D Rendering &bull; Animation</span>
+                </div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">Proficient</span>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+              Realistic atmospheric lighting, custom PBR material mapping, contextual landscape placement, and high-resolution still and video walkthrough generation.
+            </p>
+          </div>
+
+          <!-- Tool 5: Photoshop -->
+          <div class="arch-card arch-corners rounded-lg p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-blue-500/10 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400 font-heading">
+                  Ps
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-neutral-100 text-lg">Adobe Photoshop</h3>
+                  <span class="text-xs font-mono text-blue-400">Post-Production &bull; Boards</span>
+                </div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">Proficient</span>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+              Architectural diagramming, competition board composition, elevation texturing, masterplan color-coding, and render atmospheric color grading.
+            </p>
+          </div>
+
+          <!-- Tool 6: BOQ & Office -->
+          <div class="arch-card arch-corners rounded-lg p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-green-500/10 border border-green-500/40 flex items-center justify-center font-bold text-green-400 font-heading">
+                  Qs
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-neutral-100 text-lg">Quantity Surveying</h3>
+                  <span class="text-xs font-mono text-green-400">BOQ &bull; Excel Models</span>
+                </div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">Hands-on</span>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+              Preparing standard Egyptian construction BOQ templates, concrete volume take-offs, finishes area calculations, and price estimation sheets.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- ABOUT & ARCHITECTURAL PHILOSOPHY                                          -->
+    <!-- ========================================================================= -->
+    <section id="about" class="py-20 md:py-32 border-b border-neutral-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Architect Narrative -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-2">
+              <span class="w-8 h-px bg-sky-400"></span>
+              04 / PHILOSOPHY &amp; APPROACH
+            </div>
+            
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-100 leading-tight">
+              DESIGNING ARCHITECTURE THAT BELONGS TO BOTH THE SKY AND THE GROUND.
+            </h2>
+
+            <div class="space-y-4 text-neutral-400 text-base leading-relaxed">
+              <p>
+                As an architecture student entering my final semester at <strong class="text-neutral-200">Al-Azhar University</strong> (graduating in July 2025), I view architecture not just as an artistic endeavor or a sculptural object, but as a living system where human behavior, environmental science, and technical constructability intersect.
+              </p>
+              <p>
+                My passion is ignited when creative architectural concepts face the test of real-world site execution. Having spent valuable time on construction sites learning the nuances of <strong class="text-neutral-200">finishing works</strong> and mastering <strong class="text-neutral-200">quantity surveying</strong>, I bridge the frequent gap between what looks striking in a 3D visualization and what can be accurately, cost-effectively built by site teams.
+              </p>
+              <p>
+                I am actively seeking opportunities with forward-thinking architectural practices and engineering firms where I can contribute my BIM proficiency, energetic curiosity, and on-site problem-solving mindset to meaningful projects.
+              </p>
+            </div>
+
+            <!-- Core Values Pills -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+              <div class="p-3 rounded border border-neutral-800 bg-neutral-900/40">
+                <span class="text-xs font-mono text-sky-400 block">01 / CONCEPT</span>
+                <span class="text-sm font-semibold text-neutral-200">Contextual &amp; Human</span>
+              </div>
+              <div class="p-3 rounded border border-neutral-800 bg-neutral-900/40">
+                <span class="text-xs font-mono text-sky-400 block">02 / TECHNICAL</span>
+                <span class="text-sm font-semibold text-neutral-200">BIM &amp; Precision</span>
+              </div>
+              <div class="p-3 rounded border border-neutral-800 bg-neutral-900/40">
+                <span class="text-xs font-mono text-sky-400 block">03 / SITE</span>
+                <span class="text-sm font-semibold text-neutral-200">Buildability &amp; Cost</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Feature Box -->
+          <div class="lg:col-span-5">
+            <div class="arch-card arch-corners rounded-lg p-8 relative overflow-hidden space-y-6">
+              
+              <div class="aspect-square rounded overflow-hidden relative border border-neutral-800 bg-neutral-950">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Architectural Blueprint Drawing" class="w-full h-full object-cover filter contrast-125" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                  <span class="text-xs font-mono text-sky-400 uppercase">Aya Hassan</span>
+                  <span class="text-lg font-heading font-bold text-white">Al-Azhar University, Cairo</span>
+                  <span class="text-xs text-neutral-300">Department of Architectural Engineering</span>
+                </div>
+              </div>
+
+              <!-- Contact Bar -->
+              <div class="pt-2 flex items-center justify-between text-xs font-mono">
+                <span class="text-neutral-400">Class of July 2025</span>
+                <a href="https://www.linkedin.com/in/aya-hassan-405877280/" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline flex items-center gap-1">
+                  LinkedIn Profile ↗
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- ACADEMIC JOURNEY & TIMELINE                                               -->
+    <!-- ========================================================================= -->
+    <section id="education" class="py-20 md:py-32 border-b border-neutral-800/80 bg-neutral-900/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+            <span class="w-8 h-px bg-sky-400"></span>
+            05 / ACADEMIC &amp; TRAINING JOURNEY
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-100">
+            EDUCATION &amp; MILESTONES
+          </h2>
+        </div>
+
+        <!-- Vertical Timeline -->
+        <div class="relative border-l border-neutral-800 ml-4 md:ml-32 space-y-12">
+          
+          <!-- Milestone 1 -->
+          <div class="relative pl-8 group">
+            <!-- Timeline node -->
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-neutral-900 group-hover:scale-125 transition-transform"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-2">
+              <h3 class="text-xl font-heading font-bold text-neutral-100">
+                Bachelor of Architectural Engineering
+              </h3>
+              <span class="text-xs font-mono text-sky-400">Expected July 2025</span>
+            </div>
+            <div class="text-sm font-medium text-neutral-300 mb-2">
+              Faculty of Engineering &bull; Al-Azhar University, Cairo
+            </div>
+            <p class="text-sm text-neutral-400 leading-relaxed max-w-2xl">
+              Final-year architecture student. Specialized coursework in Architectural Design Studios, Urban Planning, Building Construction &amp; Working Drawings, Structural Systems, Environmental Control, and Building Economics. Currently developing the comprehensive Graduation Capstone Project.
+            </p>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="relative pl-8 group">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-neutral-900 group-hover:scale-125 transition-transform"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-2">
+              <h3 class="text-xl font-heading font-bold text-neutral-100">
+                On-Site Finishing Works Hands-On Training
+              </h3>
+              <span class="text-xs font-mono text-amber-400">Site Practical</span>
+            </div>
+            <div class="text-sm font-medium text-neutral-300 mb-2">
+              Field Execution &bull; Residential &amp; Commercial Sites
+            </div>
+            <p class="text-sm text-neutral-400 leading-relaxed max-w-2xl">
+              Completed rigorous practical field training inspecting and supervising finishing stages: masonry, plastering, ceramic/marble installation, gypsum board ceilings, plumbing/drainage line checks, and preparing site snagging lists against approved shop drawings.
+            </p>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="relative pl-8 group">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-400 border-4 border-neutral-900 group-hover:scale-125 transition-transform"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-2">
+              <h3 class="text-xl font-heading font-bold text-neutral-100">
+                Quantity Surveying &amp; Technical Office Training
+              </h3>
+              <span class="text-xs font-mono text-emerald-400">Technical Office</span>
+            </div>
+            <div class="text-sm font-medium text-neutral-300 mb-2">
+              BOQ Preparation &bull; Material Take-Offs
+            </div>
+            <p class="text-sm text-neutral-400 leading-relaxed max-w-2xl">
+              Extensive training in calculating quantities from architectural and structural drawings, extracting schedules from Revit and AutoCAD, formulating Bill of Quantities (BOQ), and estimating material requirements with wastage factors.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- CONTACT & CONNECT SECTION                                                 -->
+    <!-- ========================================================================= -->
+    <section id="contact" class="py-20 md:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left Column: Contact Info & Direct Links -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+                <span class="w-8 h-px bg-sky-400"></span>
+                06 / GET IN TOUCH
+              </div>
+              <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-100">
+                LET'S CREATE IMPACTFUL ARCHITECTURE.
+              </h2>
+              <p class="mt-4 text-neutral-400 text-base">
+                I am actively seeking junior architect, architectural designer, and BIM modeling opportunities. Open for design studios, site execution teams, and technical office roles.
+              </p>
+            </div>
+
+            <!-- Direct Contact Items -->
+            <div class="space-y-4">
+              
+              <!-- LinkedIn Direct Link -->
+              <a href="https://www.linkedin.com/in/aya-hassan-405877280/" target="_blank" rel="noopener noreferrer" class="arch-card rounded-lg p-4 flex items-center justify-between group">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded bg-[#0077b5]/20 text-[#0077b5] flex items-center justify-center font-bold">
+                    in
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono text-neutral-400">LinkedIn Profile</div>
+                    <div class="text-sm font-semibold text-neutral-100 group-hover:text-sky-400 transition-colors">
+                      aya-hassan-405877280
+                    </div>
+                  </div>
+                </div>
+                <svg class="w-4 h-4 text-neutral-400 group-hover:text-sky-400 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+
+              <!-- Email Direct Box with Copy Button -->
+              <div class="arch-card rounded-lg p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded bg-sky-500/20 text-sky-400 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono text-neutral-400">Direct Email</div>
+                    <div class="text-sm font-semibold text-neutral-100">
+                      ayahassan.arch@gmail.com
+                    </div>
+                  </div>
+                </div>
+                <button class="copy-email-btn text-xs font-mono px-3 py-1.5 rounded border border-neutral-700 hover:border-sky-400 text-neutral-300 hover:text-sky-400 transition-colors" data-email="ayahassan.arch@gmail.com">
+                  Copy
+                </button>
+              </div>
+
+              <!-- Location Box -->
+              <div class="arch-card rounded-lg p-4 flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-neutral-400">Location Base</div>
+                  <div class="text-sm font-semibold text-neutral-100">Cairo, Egypt &bull; Available Locally &amp; Remotely</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CV Download Button -->
+            <div>
+              <button class="open-cv-btn w-full py-3.5 px-6 rounded border border-sky-400/50 bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 text-sm font-mono font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                View &amp; Print Architectural CV
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Inquiry Form -->
+          <div class="lg:col-span-7">
+            <div class="arch-card arch-corners rounded-lg p-8">
+              <h3 class="text-2xl font-heading font-bold text-neutral-100 mb-2">Send an Inquiry / Message</h3>
+              <p class="text-xs font-mono text-neutral-400 mb-6">Direct communication channel for recruiters, studios &amp; collaborators.</p>
+
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-mono uppercase text-neutral-400 mb-1">Your Name / Firm</label>
+                    <input type="text" id="contact-name" required placeholder="e.g. Architecture Studio / John Doe" class="w-full px-4 py-2.5 rounded bg-neutral-900 border border-neutral-700 focus:border-sky-400 text-neutral-100 text-sm focus:outline-none" />
+                  </div>
+                  <div>
+                    <label for="contact-email" class="block text-xs font-mono uppercase text-neutral-400 mb-1">Your Email</label>
+                    <input type="email" id="contact-email" required placeholder="name@firm.com" class="w-full px-4 py-2.5 rounded bg-neutral-900 border border-neutral-700 focus:border-sky-400 text-neutral-100 text-sm focus:outline-none" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-subject" class="block text-xs font-mono uppercase text-neutral-400 mb-1">Subject</label>
+                  <input type="text" id="contact-subject" required placeholder="Architectural Position / Project Collaboration" class="w-full px-4 py-2.5 rounded bg-neutral-900 border border-neutral-700 focus:border-sky-400 text-neutral-100 text-sm focus:outline-none" />
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-mono uppercase text-neutral-400 mb-1">Message</label>
+                  <textarea id="contact-message" rows="4" required placeholder="Briefly describe the project, role, or questions..." class="w-full px-4 py-2.5 rounded bg-neutral-900 border border-neutral-700 focus:border-sky-400 text-neutral-100 text-sm focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 px-6 rounded bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all shadow-md shadow-sky-500/20 flex items-center justify-center gap-2">
+                  <span>Send Message via Email Client</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+
+                <div id="form-feedback" class="hidden text-xs font-mono text-center text-sky-400 pt-2"></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-neutral-800 bg-neutral-950 py-12 text-neutral-500 text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <span class="text-neutral-300 font-heading font-bold text-sm tracking-wider">AYA HASSAN</span>
+        <span>&bull;</span>
+        <span>Architectural Engineering &bull; Al-Azhar University</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://www.linkedin.com/in/aya-hassan-405877280/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">
+          LinkedIn Profile ↗
+        </a>
+        <a href="#hero" class="hover:text-sky-400 transition-colors">
+          Back to Top ↑
+        </a>
+      </div>
+
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 text-[11px] text-neutral-600 flex flex-col sm:flex-row justify-between">
+      <span>Built for GitHub Pages deployment. Designed with minimalist architectural precision.</span>
+      <span>&copy; 2025 Aya Hassan. All rights reserved.</span>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL 1: PROJECT CASE STUDY DRAWER                                        -->
+  <!-- ========================================================================= -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 modal-overlay flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="arch-card arch-corners rounded-xl max-w-4xl w-full max-h-[92vh] overflow-y-auto p-6 sm:p-10 border border-neutral-700 bg-neutral-950 relative my-auto shadow-2xl">
+      
+      <!-- Close Button -->
+      <button id="modal-close-btn" aria-label="Close Modal" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-neutral-800/80 hover:bg-neutral-700 text-neutral-300 hover:text-white flex items-center justify-center transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6 pr-10">
+        <div id="modal-subtitle" class="text-xs font-mono uppercase tracking-widest text-sky-400 mb-1"></div>
+        <h2 id="modal-title" class="text-2xl sm:text-4xl font-heading font-bold text-neutral-100"></h2>
+      </div>
+
+      <!-- Quick Metadata Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded bg-neutral-900/60 border border-neutral-800 text-xs font-mono mb-8">
+        <div>
+          <span class="text-neutral-500 block">TIMELINE</span>
+          <span id="modal-year" class="text-neutral-200 font-semibold"></span>
+        </div>
+        <div>
+          <span class="text-neutral-500 block">LOCATION</span>
+          <span id="modal-location" class="text-neutral-200 font-semibold"></span>
+        </div>
+        <div>
+          <span class="text-neutral-500 block">ROLE</span>
+          <span id="modal-role" class="text-neutral-200 font-semibold"></span>
+        </div>
+        <div>
+          <span class="text-neutral-500 block">DOC STATUS</span>
+          <span class="text-emerald-400 font-semibold">Approved</span>
+        </div>
+      </div>
+
+      <!-- Software Badges -->
+      <div class="mb-8">
+        <div class="text-xs font-mono uppercase text-neutral-400 mb-2">Tools &amp; Methodologies Employed:</div>
+        <div id="modal-tools" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <!-- Gallery Plates -->
+      <div class="mb-8">
+        <div class="text-xs font-mono uppercase text-neutral-400 mb-3">Architectural Visuals &amp; Drawings:</div>
+        <div id="modal-gallery" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+      </div>
+
+      <!-- Case Study Body -->
+      <div class="space-y-6 text-sm text-neutral-300 border-t border-neutral-800 pt-6">
+        <div>
+          <h4 class="text-base font-heading font-bold text-neutral-100 mb-2">Project Overview</h4>
+          <p id="modal-overview" class="leading-relaxed text-neutral-400"></p>
+        </div>
+
+        <div>
+          <h4 class="text-base font-heading font-bold text-neutral-100 mb-2">Design Concept &amp; Spatial Philosophy</h4>
+          <p id="modal-concept" class="leading-relaxed text-neutral-400"></p>
+        </div>
+
+        <div>
+          <h4 class="text-base font-heading font-bold text-neutral-100 mb-2">BIM &amp; Technical Execution</h4>
+          <p id="modal-technical" class="leading-relaxed text-neutral-400"></p>
+        </div>
+
+        <div class="p-4 rounded border border-amber-500/30 bg-amber-500/10">
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-amber-300 mb-1">Site &amp; Quantity Surveying Consideration</h4>
+          <p id="modal-practical" class="text-xs leading-relaxed text-neutral-300"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL 2: ARCHITECTURAL CURRICULUM VITAE (CV) VIEWER                       -->
+  <!-- ========================================================================= -->
+  <div id="cv-modal" class="hidden fixed inset-0 z-50 modal-overlay flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="arch-card arch-corners rounded-xl max-w-4xl w-full max-h-[92vh] overflow-y-auto p-6 sm:p-12 border border-neutral-700 bg-neutral-950 relative my-auto shadow-2xl">
+      
+      <!-- Top Action Controls -->
+      <div class="flex items-center justify-between border-b border-neutral-800 pb-4 mb-8">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+          <span class="text-xs font-mono text-neutral-400 ml-2">Aya_Hassan_Architect_CV.pdf</span>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <button id="cv-print-btn" class="px-3.5 py-1.5 rounded border border-neutral-700 hover:border-sky-400 bg-neutral-800 text-xs font-mono text-neutral-200 flex items-center gap-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+            </svg>
+            Print / Save PDF
+          </button>
+          
+          <button id="cv-close-btn" class="w-8 h-8 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-300 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- CV Document Body (Printable & Highly Stylized) -->
+      <div id="cv-printable-content" class="space-y-8 text-neutral-200">
+        
+        <!-- CV Header -->
+        <div class="border-b border-neutral-800 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <h1 class="text-3xl font-heading font-bold tracking-tight text-white">AYA HASSAN</h1>
+            <p class="text-sm font-mono text-sky-400 mt-1 uppercase tracking-wider">
+              Architectural Designer &bull; BIM Specialist &bull; Site Engineer Trainee
+            </p>
+          </div>
+          <div class="text-xs font-mono text-neutral-400 space-y-1 sm:text-right">
+            <div>Cairo, Egypt</div>
+            <div>ayahassan.arch@gmail.com</div>
+            <div>linkedin.com/in/aya-hassan-405877280</div>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div>
+          <h2 class="text-xs font-mono font-bold uppercase tracking-widest text-sky-400 mb-2 border-b border-neutral-800 pb-1">
+            Professional Summary
+          </h2>
+          <p class="text-sm text-neutral-300 leading-relaxed">
+            Final-year architecture student at Al-Azhar University graduating July 2025 with strong proficiency in Revit BIM modeling, AutoCAD drafting, 3D visualization, and practical on-site construction execution. Accomplished hands-on field training in both Quantity Surveying (material estimation &amp; BOQ formulation) and Finishing Works supervision. Dedicated to synthesizing creative architectural concepts with rigorous constructability.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="text-xs font-mono font-bold uppercase tracking-widest text-sky-400 mb-3 border-b border-neutral-800 pb-1">
+            Education
+          </h2>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm font-bold text-white">
+                <span>B.Sc. in Architectural Engineering</span>
+                <span class="font-mono font-normal text-xs text-sky-400">Graduating July 2025</span>
+              </div>
+              <div class="text-xs text-neutral-400">Faculty of Engineering, Al-Azhar University &bull; Cairo, Egypt</div>
+              <p class="text-xs text-neutral-400 mt-1">
+                Relevant Studios: Architectural Design, Working Drawings &amp; Building Construction, Structural Engineering, Environmental Systems, Urban Planning, and Building Specifications.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practical Site & Technical Training -->
+        <div>
+          <h2 class="text-xs font-mono font-bold uppercase tracking-widest text-sky-400 mb-3 border-b border-neutral-800 pb-1">
+            Hands-on Field &amp; Technical Training
+          </h2>
+          <div class="space-y-4 text-xs">
+            <div>
+              <div class="flex justify-between font-bold text-neutral-100 text-sm">
+                <span>Finishing Works Field Trainee (تشطيبات موقع)</span>
+                <span class="font-mono font-normal text-xs text-neutral-400">Practical Site Training</span>
+              </div>
+              <ul class="list-disc list-inside text-neutral-400 mt-1 space-y-1">
+                <li>Supervised and inspected key site finishing activities: masonry plumbness, cement plastering, marble and porcelain floor layouts, and gypsum board ceiling levels.</li>
+                <li>Conducted MEP-Architectural coordinate checks and prepared on-site snag lists (punch lists) to ensure fidelity to working drawings.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-neutral-100 text-sm">
+                <span>Quantity Surveying &amp; BOQ Trainee (حصر كميات)</span>
+                <span class="font-mono font-normal text-xs text-neutral-400">Technical Office</span>
+              </div>
+              <ul class="list-disc list-inside text-neutral-400 mt-1 space-y-1">
+                <li>Extracted item quantities from architectural drawings and BIM models: concrete volumes, brickwork masonry, plaster square meters, ceramic areas, and painting packages.</li>
+                <li>Prepared Bill of Quantities (BOQ) with itemized specifications and material wastage allowances.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills Matrix -->
+        <div>
+          <h2 class="text-xs font-mono font-bold uppercase tracking-widest text-sky-400 mb-3 border-b border-neutral-800 pb-1">
+            Technical &amp; Digital Competencies
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+            <div class="space-y-1">
+              <span class="text-neutral-400 block font-bold">Architectural &amp; BIM Software:</span>
+              <div class="text-neutral-300">Autodesk Revit (BIM LOD 300), AutoCAD (2D/3D), SketchUp Pro</div>
+            </div>
+            <div class="space-y-1">
+              <span class="text-neutral-400 block font-bold">Visualization &amp; Graphics:</span>
+              <div class="text-neutral-300">Lumion (Still &amp; Walkthrough Renders), Adobe Photoshop</div>
+            </div>
+            <div class="space-y-1">
+              <span class="text-neutral-400 block font-bold">Site &amp; Technical Office:</span>
+              <div class="text-neutral-300">Quantity Surveying (BOQ), Finishing Supervision, Snag Lists</div>
+            </div>
+            <div class="space-y-1">
+              <span class="text-neutral-400 block font-bold">Languages:</span>
+              <div class="text-neutral-300">Arabic (Native), English (Professional Working Proficiency)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript Main Engine -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

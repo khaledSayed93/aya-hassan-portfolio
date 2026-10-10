@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Aya Hassan - Architectural Portfolio & BIM Specialist
+   Custom Architectural Design System & Micro-Interactions
+   ========================================================================== */
+
+:root {
+  --bg-primary: #0b0d10;
+  --bg-secondary: #13171f;
+  --bg-card: rgba(19, 23, 31, 0.75);
+  --bg-card-hover: rgba(28, 34, 46, 0.9);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(56, 189, 248, 0.3);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-cyan: #38bdf8;
+  --accent-gold: #e2b170;
+  --accent-emerald: #10b981;
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --blueprint-mesh: rgba(56, 189, 248, 0.04);
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(11, 13, 16, 0.85);
+}
+
+[data-theme="light"] {
+  --bg-primary: #fbfbf9;
+  --bg-secondary: #f3f4f0;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --border-color: rgba(15, 23, 42, 0.09);
+  --border-accent: rgba(2, 132, 199, 0.4);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --accent-cyan: #0284c7;
+  --accent-gold: #c2883e;
+  --accent-emerald: #059669;
+  --grid-line: rgba(15, 23, 42, 0.035);
+  --blueprint-mesh: rgba(2, 132, 199, 0.03);
+  --card-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.08);
+  --glass-bg: rgba(251, 251, 249, 0.88);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Headings font */
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-spec {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism Navigation */
+.nav-blur {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Architectural Card */
+.arch-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.arch-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+}
+
+/* Architectural Dimension Corner Marks */
+.arch-corners::before,
+.arch-corners::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+.arch-corners::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--accent-cyan);
+  border-left: 2px solid var(--accent-cyan);
+}
+
+.arch-corners::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--accent-cyan);
+  border-right: 2px solid var(--accent-cyan);
+}
+
+/* Subtle blueprint grid overlay */
+.blueprint-bg {
+  position: relative;
+}
+
+.blueprint-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, var(--blueprint-mesh) 1px, transparent 0);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+/* Project Badge */
+.tag-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Modal Transitions */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Subtle glow */
+.glow-accent {
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.2);
+}
+
+/* Geometric Blueprint Crosshairs */
+.crosshair {
+  position: relative;
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background-color: var(--border-color);
+}
+
+/* Interactive Image Hover Zoom */
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.img-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+/* CV Print Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    background-image: none !important;
+  }
+  
+  nav, footer, .no-print, #theme-toggle, .mobile-menu-btn {
+    display: none !important;
+  }
+  
+  .arch-card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    background: #ffffff !important;
+  }
+  
+  #cv-modal {
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+  }
+}
