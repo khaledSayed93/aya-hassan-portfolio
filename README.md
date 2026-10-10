@@ -100,7 +100,7 @@ All project data lives inside [`js/main.js`](./js/main.js) in the `projectsData`
 - `overview`, `concept`, `technicalDetails`, and `practicalNote`
 
 ### 2. Updating Contact Information & Links
-In [`index.html`](./index.html), search for `ayahassan.arch@gmail.com` or `https://www.linkedin.com/in/aya-hassan-405877280/` to update phone numbers, links, or addresses as needed.
+In [`index.html`](./index.html), search for `ayahassan200257@gmail.com` or `https://www.linkedin.com/in/aya-hassan-405877280/` to update phone numbers, links, or addresses as needed.
 
 ---
 

@@ -355,7 +355,7 @@ function initClipboard() {
   const copyBtns = document.querySelectorAll(".copy-email-btn");
   copyBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      const email = btn.getAttribute("data-email") || "ayahassan.arch@gmail.com";
+      const email = btn.getAttribute("data-email") || "ayahassan200257@gmail.com";
       navigator.clipboard.writeText(email).then(() => {
         const originalText = btn.innerHTML;
         btn.innerHTML = `<svg class="w-4 h-4 inline-block mr-1 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Copied!`;
@@ -370,29 +370,84 @@ function initClipboard() {
 }
 
 // ==========================================
-// 8. Contact Form Handling (Mailto composer)
+// 8. Contact Form Handling (Direct Email Delivery via FormSubmit AJAX)
 // ==========================================
 function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  const submitBtn = document.getElementById("contact-submit-btn");
+  const btnText = document.getElementById("submit-btn-text");
+  const feedback = document.getElementById("form-feedback");
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const name = document.getElementById("contact-name")?.value || "";
-    const email = document.getElementById("contact-email")?.value || "";
-    const subject = document.getElementById("contact-subject")?.value || "Architectural Project / Opportunity";
-    const message = document.getElementById("contact-message")?.value || "";
 
-    const mailtoBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
-    const mailtoLink = `mailto:ayahassan.arch@gmail.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
+    const name = document.getElementById("contact-name")?.value.trim() || "";
+    const email = document.getElementById("contact-email")?.value.trim() || "";
+    const subject = document.getElementById("contact-subject")?.value.trim() || "Architectural Inquiry";
+    const message = document.getElementById("contact-message")?.value.trim() || "";
 
-    const feedback = document.getElementById("form-feedback");
-    if (feedback) {
-      feedback.classList.remove("hidden");
-      feedback.innerText = "Opening your email client...";
+    if (!name || !email || !message) {
+      if (feedback) {
+        feedback.className = "text-xs font-mono text-center p-3 rounded bg-red-500/10 border border-red-500/30 text-red-400";
+        feedback.innerText = "Please fill in all required fields.";
+        feedback.classList.remove("hidden");
+      }
+      return;
     }
 
-    window.location.href = mailtoLink;
+    // Set Loading State
+    if (submitBtn) submitBtn.disabled = true;
+    if (btnText) btnText.innerText = "Sending Message...";
+    if (feedback) {
+      feedback.className = "text-xs font-mono text-center p-3 rounded bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center gap-2";
+      feedback.innerHTML = `<svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Dispatching email directly to Aya Hassan...`;
+      feedback.classList.remove("hidden");
+    }
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/ayahassan200257@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          _subject: `[Portfolio Inquiry] ${subject} - from ${name}`,
+          message: message,
+          _template: "table"
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && (result.success === "true" || result.success === true)) {
+        // Success state
+        form.reset();
+        if (feedback) {
+          feedback.className = "text-xs font-mono text-center p-3 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400";
+          feedback.innerHTML = `<span class="font-bold">✓ Message delivered successfully!</span><br/>Thank you, your message has been sent directly to Aya Hassan's inbox (ayahassan200257@gmail.com).`;
+        }
+      } else {
+        throw new Error(result.message || "Failed to deliver message via form service.");
+      }
+    } catch (err) {
+      console.warn("Direct form delivery encountered an issue, offering mailto fallback:", err);
+      // Fallback: offer mailto link
+      const mailtoBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+      const mailtoLink = `mailto:ayahassan200257@gmail.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
+      
+      if (feedback) {
+        feedback.className = "text-xs font-mono text-center p-3 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300";
+        feedback.innerHTML = `Could not reach form gateway. <a href="${mailtoLink}" class="underline font-bold text-sky-400 hover:text-sky-300 ml-1">Click here to send directly via your Email Client</a>`;
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+      if (btnText) btnText.innerText = "Send Message to Aya Hassan";
+    }
   });
 }
 
